@@ -6,7 +6,7 @@
       <div class="footer-links">
         <a href="https://github.com/Francesco070" target="_blank" rel="noopener">GitHub</a>
         <a href="https://cr.frnc.dev" target="_blank" rel="noopener">Registry</a>
-        <a href="https://status.frnc.dev" target="_blank" rel="noopener">Status</a>
+        <a href="https://status.frnc.dev/status/francesco" target="_blank" rel="noopener">Status</a>
         <a href="https://vault.frnc.dev" target="_blank" rel="noopener">Vault</a>
       </div>
     </div>

@@ -30,7 +30,7 @@
               </div>
               <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://status.frnc.dev" target="_blank" rel="noopener" class="contact-link">
+            <a href="https://status.frnc.dev/status/francesco" target="_blank" rel="noopener" class="contact-link">
               <div class="link-icon">📊</div>
               <div>
                 <div class="link-label">Status Page</div>
