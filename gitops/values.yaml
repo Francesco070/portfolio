@@ -1,0 +1,53 @@
+applicationName: "portfolio"
+
+deployment:
+  image:
+    repository: cr.frnc.dev/francesco/portfolio
+    pullPolicy: Always
+    tag: latest
+
+  containerSecurityContext:
+    runAsNonRoot: false
+    readOnlyRootFilesystem: false
+
+  ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
+
+service:
+  ports:
+    - port: 80
+      name: http
+      protocol: TCP
+      targetPort: 80
+
+vpa:
+  enabled: true
+
+ingress:
+  enabled: true
+  annotations:
+    dns.gardener.cloud/class: garden
+    dns.gardener.cloud/dnsnames: '*'
+    cert.gardener.cloud/purpose: managed
+  ingressClassName: haproxy
+  hosts:
+    - host: frnc.dev
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: tls-secret-portfolio
+      hosts:
+        - frnc.dev
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: 20m
+    memory: 32Mi
+  limits:
+    cpu: 100m
+    memory: 64Mi
